@@ -1,13 +1,16 @@
 // テキスト「繰り返し」
 function setup() {
-  createCanvas(100,100);
-  fill(0);
-  let x = 0;
-  while(x < 100){ // 四角を描く座標が描画範囲内であれば続ける
-    rect(x, x, 20, 20);
-    x = x + 20; // 繰り返し1回ごとに場所を動かす
+  noFill();
+  for(let i = 0; i<10; i++){
+      let r = (i + 1)*10
+      ellipse(50, 50, r);
+    if(i < 4){
+       stroke(0,0,225)
+    }
+   else{
+    stroke(225,0,0)}
   }
-}
+  }
 
 // for 文を使うと、同じプログラムを以下のように書くことができます
 // function setup() {
