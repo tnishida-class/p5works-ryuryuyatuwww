@@ -22,7 +22,7 @@ function setup() {
    for(let j=0;6<j<8;j++){
      if((i+j)%2==1){
        fill(255);
-       ellipse(i*10+5,j*10+5,10,10)
+       ellipse(i*10-5,j*10-5,10,10)
      }
    }
  }
