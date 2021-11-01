@@ -1,18 +1,20 @@
-// 練習問題：吹き出し
-// 吹き出しの位置、背景色 etc. を関数 balloon の引数で指定できるようにしてみよう
-// 吹き出しにしっぽを付けてみよう
+let x, z; // ポイント1：関数の外で変数を宣言する
+
 function setup(){
-  createCanvas(400, 400);
-  background(255);
-  balloon("I love keyakizaka46");
+  createCanvas(windowWidth, windowHeight);
+  x = width / 2;
+  z = height / 2;
 }
 
-function balloon(t){
-  let w = textWidth(t);
-  let h = textAscent() + textDescent();
-  let p = 2;
-  fill(0);
-  rect(0, 0, w + p * 2, h + p * 2);
-  fill(255);
-  text(t, p, h + p);
+function draw(){
+  background(160, 192, 255); // ポイント2: draw の最初に background を書く
+  ellipse(300, 300, z);
+  z += 2;
+  while(z > 100){
+  z -= 70;
+}
+ if(keyIsDown(LEFT_ARROW)){ z += 2;
+ while(z > 100){
+ z -= 50; }
+}
 }
